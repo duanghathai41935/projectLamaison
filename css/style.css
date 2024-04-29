@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* body { */
+
+
+/* font-family: 'Source Sans Pro', 'sans-serif'; */
+
+
+/* background: #f1f1f1; */
+
+#text-menu {
+    color: #444;
+}
+
+
+/* test Menu dropdown */
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+
+/* Sub Menu */
+
+.submenu-1 {
+    position: absolute;
+    width: max-content;
+    /* left: 50%; */
+    background-color: #65CBB8;
+    display: none;
+}
+
+.submenu-2 {
+    position: absolute;
+    width: max-content;
+    background-color: #DEF2F1;
+    left: 100%;
+    top: 0;
+    display: none;
+}
+
+.menu li:hover {
+    color: #01949A;
+}
+
+.menu li:hover>.submenu-1 {
+    display: block;
+}
+
+.menu li:hover>.submenu-2 {
+    display: block;
+}
+
+.lv-2::after {
+    position: relative;
+    left: 20%;
+    content: "\25BE";
+}
+
+.lv-3::after {
+    position: relative;
+    left: 20%;
+    content: "\25B8";
+}
+
+
+/* Menu */
+
+nav {
+    background: white;
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar-brand img {
+    width: 150px;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 18px;
+    padding: 15px 5px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.logo a,
+.cart-toggle a,
+.menu-toggle a {
+    font-size: 20px;
+}
+
+.button.secondary {
+    border-bottom: 1px solid #444;
+}
+
+
+/* footer */
+
+footer {
+    clear: both;
+    color: #444;
+    text-align: left;
+    padding: 3em 1em;
+    margin: 0;
+}
+
+footer a {
+    color: #444;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #01949A;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer i:hover {
+    color: #01949A;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Mobile Menu */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-toggle {
+    order: 0;
+}
+
+.menu-toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+.row_promotion {
+    background: -webkit-linear-gradient(bottom, rgba(100, 0, 0, 0), rgb(122, 198, 198));
+    padding: 1%;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.row_promotion h1 {
+    color: rgb(253, 128, 128);
+    font-weight: bold;
+}
+
+
+/* .btn{
+    background-color: #1dadab;
+    color: white;
+} */
+
+.btn_promotion:hover {
+    background-color: lightgray;
+    color: #000;
+}
+
+.btn_promotion {
+    background-color: #1dadab;
+    color: white;
+    border: 0;
+}
+
+.new_collec {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.new_collec h1 {
+    font-weight: bold;
+}
+
+.card_newcollec {
+    margin: 0;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+.card_newcollec a {
+    text-decoration: none;
+    float: left;
+}
+
+
+/* ถ้าไม่ใส่ cursor: pointer ไป ตอนแสดงใน ie6 caption จะหน่วงนิดนึง*/
+
+.card_newcollec a:hover {
+    cursor: pointer;
+}
+
+
+/* ตกแต่งภาพให้ดูคล้ายๆ ภาพโพลารอยด์*/
+
+.card_newcollec a img {
+    float: left;
+    margin: 0;
+    border: none;
+    padding: 10px;
+    background: #fff;
+    /* border: 1px solid #ddd; */
+}
+
+
+/* เมื่อเอาเมาส์ไปชี้ที่รูปภาพ ให้แสดงตัว caption ขึ้นมา โดยกำหนดความโปร่งแสงไว้ที่ 75%*/
+
+
+/* ตรงนี้แหละที่เป็นจุดสำคัญ  CSS ตรงนี้จะทำงานก็ต่อเมื่อเอาเมาส์ไปชี้ที่ภาพเท่านั้น  โอ้วเหมือน javascript เลย*/
+
+.card_newcollec a:hover .desc {
+    display: block;
+    font-size: 1.2em;
+    padding: 3%;
+    background: #1dadab;
+    /* background: -webkit-linear-gradient(bottom,rgba(255,0,0,0),rgb(94, 206, 210)); */
+    filter: alpha(opacity=75);
+    opacity: .75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    /*--IE 8 Transparency--*/
+    color: #fff;
+    position: absolute;
+    bottom: 1%;
+    /* left: 11px; */
+    /* padding: 10px; */
+    margin: 0;
+    width: 100%;
+    /* border-top: 1px solid #999; */
+}
+
+
+/* ตัว strong ใน caption กำหนดให้ใหญ่กว่าปกติหน่อย เพื่อความสวยงาม*/
+
+.card_newcollec a:hover .desc strong {
+    display: block;
+    /* margin-bottom: 5px; */
+    /* font-size:1.5em; */
+}
+
+
+/* ตอนแสดงขึ้นมาครั้งแรก ให้ซ่อน caption ไว้ก่อน*/
+
+.card_newcollec a .desc {
+    display: none;
+}
+
+.shopnow {
+    background-color: #0f7775;
+}
+
+.shopnow:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.row_promotion span:hover {
+    color: black;
+}
+
+.card_roomtype img:hover {
+    width: 105%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#type-room {
+    margin: 4%;
+}
+
+
+/* Tablet Menu */
+
+@media screen and (max-width:600px) {
+    .type-room div {
+        width: 20%;
+    }
+}
+
+@media all and (min-width:600px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .cart-toggle {
+        order: 1;
+        text-align: right;
+    }
+    .menu-toggle {
+        order: 2;
+        text-align: right;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button a {
+        color: #f1f1f1;
+        padding: 7px 15px;
+        background: teal;
+        border: 1px solid #006d6d;
+    }
+    .button.secondary a {
+        color: #444;
+        background: transparent;
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+    .button.secondary a:hover {
+        color: #7bbebe;
+    }
+}
+
+
+/* Desktop Menu */
+
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .cart-toggle {
+        /* padding-right: 0;
+        margin-right: 0; */
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+    }
+    .button {
+        order: 2;
+    }
+    .main li {
+        padding: 15px 10px;
+    }
+    .menu li.button {
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu .dropdown-toggle:after {
+        border-top: .3em solid transparent;
+        border-right: 0;
+        border-bottom: .3em solid transparent;
+        border-left: .3em solid;
+    }
+    .dropdown-menu .dropdown-menu {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .dropdown-menu li {
+        position: relative;
+    }
+    .nav-item .submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -7px;
+    }
+    .nav-item .submenu-left {
+        right: 100%;
+        left: auto;
+    }
+    .dropdown-menu>li:hover {
+        background-color: #f1f1f1
+    }
+    .dropdown-menu>li:hover>.submenu {
+        display: block;
+    }
+}

@@ -1,0 +1,105 @@
+#header_cart {
+    background-image: url('https://wp-assets.dotproperty-kh.com/wp-content/uploads/sites/9/2020/07/23103655/011.jpg');
+    width: 100%;
+    padding: 10%;
+    background-position: 10% 65%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.cart-table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.card_qty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card_qty button {
+    width: 10px;
+    height: 10px;
+    outline: none;
+    border-style: none;
+}
+
+.table {
+    margin-top: 3em;
+    /* padding: 1em; */
+    table-layout: fixed;
+}
+
+.send:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-quantity {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 100%;
+}
+
+h2 {
+    margin: 0 50px;
+    font-size: 10%;
+}
+
+button {
+    width: 10px;
+    height: 30px;
+    outline: none;
+    border-style: none;
+    font-size: 20px;
+}
+
+#buttom1,
+#buttom2 {
+    display: inline-block;
+}
+
+.cart-container {
+    background-color: rgb(236, 236, 236);
+    padding: 4em;
+    width: 43%;
+    margin-bottom: 5%;
+}
+
+.send-button {
+    margin-top: 7%;
+    padding: 2.5%;
+    background-color: #1dadad;
+    text-decoration: none;
+    width: 70%;
+    text-align: center;
+    margin-left: 16%;
+}
+
+.div-total {
+    border: 1px solid lightgray;
+    background: white;
+}
+
+.contain-total {
+    background-color: rgb(236, 236, 236);
+    padding: 4em;
+    width: 43%;
+    margin-bottom: 5%;
+}
+
+.col-total {
+    border: 1px solid rgb(164, 163, 163);
+    padding: 3%;
+}
+
+@media only screen and (max-width:767px) {
+    body {
+        font-size: 14px;
+    }
+}

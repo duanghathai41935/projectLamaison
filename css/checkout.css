@@ -1,0 +1,57 @@
+#header_cart {
+    background-image: url('https://wp-assets.dotproperty-kh.com/wp-content/uploads/sites/9/2020/07/23103655/011.jpg');
+    width: 100%;
+    padding: 10%;
+    background-position: 10% 65%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#Click-login {
+    color: teal;
+}
+
+#Click-login:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.place-order:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+label.req::after {
+    content: "*";
+    color: red;
+}
+
+.div-total {
+    margin-top: 4%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 1%;
+    color: teal;
+}
+
+.div-placeorder {
+    margin-top: 4%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgb(246, 246, 246);
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-bottom: 4%;
+    margin-bottom: 10%;
+}
+
+.place-order {
+    margin-top: 5%;
+    padding: 2.5%;
+    background-color: #1dadad;
+    text-decoration: none;
+    width: 50%;
+    text-align: center;
+    margin-left: 0%;
+}

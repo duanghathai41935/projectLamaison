@@ -1,0 +1,203 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* footer */
+    
+    footer {
+        clear: both;
+        color: #444;
+        text-align: left;
+        padding: 3em 4em;
+        margin: 0;
+    }
+    
+    footer a:hover {
+        color: teal;
+        text-decoration: none;
+        text-shadow: 1px 1px 20px gray;
+    }
+    
+    img {
+        width: 80%;
+    }
+    
+    .a-pic img:hover {
+        /* background-color: black; */
+        opacity: 0.5;
+        filter: alpha(opacity=60);
+        /* filter: black(opacity=60); */
+        /* width: 90%; */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    #head-bedroom div {
+        width: 100%;
+        float: inline-starts;
+        padding: 0;
+    }
+    
+    #text-banner-bed {
+        /* top: 50%;
+        left: 50%; */
+        transform: translate(65%, 510%);
+        border-right: 4px solid teal;
+    }
+    
+    #pic-head-bed {
+        width: fit-content;
+        transform: translate(-40%, 15%);
+    }
+    /*     
+    .row_banner {
+        background-color: rgb(104, 199, 191);
+        margin: 2em 0em;
+    } */
+    
+    footer li {
+        list-style-type: none;
+    }
+    
+    footer a {
+        color: #444;
+        text-decoration: none;
+    }
+    
+    #text-menu {
+        color: #444;
+    }
+    
+    .navbar-brand img {
+        width: 150px;
+    }
+    /* Image Bedroom*/
+    
+    .dropdown-submenu {
+        position: relative;
+    }
+    
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+    /* Sub Menu */
+    
+    .submenu-1 {
+        position: absolute;
+        width: max-content;
+        background-color: #65CBB8;
+        display: none;
+    }
+    
+    .submenu-2 {
+        position: absolute;
+        width: max-content;
+        background-color: #DEF2F1;
+        left: 100%;
+        top: 0;
+        display: none;
+    }
+    
+    .menu li:hover {
+        color: #01949A;
+    }
+    
+    .menu li:hover>.submenu-1 {
+        display: block;
+    }
+    
+    .menu li:hover>.submenu-2 {
+        display: block;
+    }
+    
+    .lv-2::after {
+        position: relative;
+        left: 20%;
+        content: "\25BE";
+    }
+    
+    .lv-3::after {
+        position: relative;
+        left: 20%;
+        content: "\25B8";
+    }
+    /* shop now a */
+    
+    .btn-outline-secondary {
+        color: #01949A;
+        border: 1px solid teal;
+    }
+    
+    .btn-outline-secondary:hover {
+        background-color: #01949A;
+        color: white;
+    }
+    
+    .bedroom_collection img {
+        object-fit: scale-down;
+    }
+    
+    div .bedroom_collection {
+        margin: 1em 0em;
+        overflow: hidden;
+        float: left;
+        position: relative;
+    }
+    
+    div .bedroom_collection a {
+        text-decoration: none;
+        float: left;
+    }
+    /* ถ้าไม่ใส่ cursor: pointer ไป ตอนแสดงใน ie6 caption จะหน่วงนิดนึง*/
+    
+    div .bedroom_collection a:hover {
+        filter: alpha(opacity=80);
+        opacity: .9;
+        cursor: pointer;
+    }
+    /* ตกแต่งภาพให้ดูคล้ายๆ ภาพโพลารอยด์*/
+    
+    div .bedroom_collectionc a img {
+        float: left;
+        margin: 0;
+        border: none;
+        /* padding: 10px; */
+        background: #fff;
+        /* border: 1px solid #ddd; */
+    }
+    /* เมื่อเอาเมาส์ไปชี้ที่รูปภาพ ให้แสดงตัว caption ขึ้นมา โดยกำหนดความโปร่งแสงไว้ที่ 75%*/
+    /* ตรงนี้แหละที่เป็นจุดสำคัญ  CSS ตรงนี้จะทำงานก็ต่อเมื่อเอาเมาส์ไปชี้ที่ภาพเท่านั้น  โอ้วเหมือน javascript เลย*/
+    
+    div .bedroom_collection a:hover .desc {
+        display: block;
+        font-size: 1.2em;
+        padding: 1%;
+        background: #1dadab;
+        /* background: -webkit-linear-gradient(bottom, rgba(255, 0, 0, 0), rgb(94, 206, 210)); */
+        filter: alpha(opacity=100);
+        opacity: 2.0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        /*--IE 8 Transparency--*/
+        color: #fff;
+        position: absolute;
+        bottom: 50%;
+        /* left: 11px; */
+        /* padding: 10px; */
+        margin: 0;
+        width: 100%;
+        /* border-top: 1px solid rgb(75, 196, 196); */
+    }
+    /* ตัว strong ใน caption กำหนดให้ใหญ่กว่าปกติหน่อย เพื่อความสวยงาม*/
+    
+    div .bedroom_collection a:hover .desc strong {
+        display: block;
+        /* margin-bottom: 5px; */
+        /* font-size:1.5em; */
+    }
+    /* ตอนแสดงขึ้นมาครั้งแรก ให้ซ่อน caption ไว้ก่อน*/
+    
+    div .bedroom_collection a .desc {
+        display: none;
+    }

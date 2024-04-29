@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container h5 {
+    background-color: rgb(87, 178, 166);
+    padding: 1em;
+    text-align: center;
+    color: white;
+    margin: 2em 0em;
+}
+
+.kitchen_collection a:hover,
+footer a:hover {
+    color: teal;
+    text-decoration: none;
+    text-shadow: 1px 1px 20px gray;
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: #444;
+}
+
+.navbar-brand img {
+    width: 150px;
+}
+
+.shop-banner {
+    margin: auto;
+}
+
+.snip {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 230px;
+    max-width: 315px;
+    width: 100%;
+    color: #fff;
+    font-size: 2px;
+    text-align: center;
+}
+
+snip * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.snip:before {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    top: 100%;
+    content: "";
+    background-color: rgba(51, 51, 51, 0.9);
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.snip img {
+    vertical-align: top;
+    max-width: 100%;
+    backface-visibility: hidden;
+    height: 150px;
+}
+
+.snip figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.snip h3,
+.snip h5 {
+    margin: 0;
+    opacity: 0;
+    letter-spacing: 1px;
+}
+
+.snip h3 {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    text-transform: uppercase;
+    font-weight: 400;
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    margin-bottom: 5px;
+}
+
+.snip h5 {
+    font-weight: 400;
+    background-color: #5daea9;
+    padding: 3px 10px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.snip a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.snip:hover:before,
+.snip.hover:before {
+    top: 10px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.snip:hover h3,
+.snip.hover h3,
+.snip:hover h5,
+.snip.hover h5 {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}

@@ -1,0 +1,225 @@
+.txt-living {
+    border-top: 5px solid #1dadab;
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3%;
+    margin-bottom: 7%;
+    color: #1dadab;
+    border-bottom: 5px solid #1dadab;
+}
+
+.txt-body {
+    border-left: 3px solid lightgrey;
+    float: left;
+}
+
+.txt-body h1 {
+    color: #1dadab;
+    font-weight: bold;
+    padding-top: 10%;
+    font-size: xx-large;
+}
+
+.snip {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 230px;
+    max-width: 315px;
+    width: 100%;
+    color: #fff;
+    font-size: 2px;
+    text-align: center;
+}
+
+snip * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.snip:before {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    top: 100%;
+    content: "";
+    background-color: rgba(51, 51, 51, 0.9);
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.snip img {
+    vertical-align: top;
+    max-width: 100%;
+    backface-visibility: hidden;
+    height: 150px;
+}
+
+.snip figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.snip h3,
+.snip h5 {
+    margin: 0;
+    opacity: 0;
+    letter-spacing: 1px;
+}
+
+.snip h3 {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    text-transform: uppercase;
+    font-weight: 400;
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    margin-bottom: 5px;
+}
+
+.snip h5 {
+    font-weight: 400;
+    background-color: #5daea9;
+    padding: 3px 10px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.snip a-shop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.snip:hover:before,
+.snip.hover:before {
+    top: 10px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.snip:hover h3,
+.snip.hover h3,
+.snip:hover h5,
+.snip.hover h5 {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.new_collec {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.new_collec h1 {
+    font-weight: bold;
+}
+
+.card_newcollec {
+    margin: 0;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+.card_newcollec a-shop {
+    text-decoration: none;
+    float: left;
+}
+
+
+/* ถ้าไม่ใส่ cursor: pointer ไป ตอนแสดงใน ie6 caption จะหน่วงนิดนึง*/
+
+.card_newcollec a-shop:hover {
+    cursor: pointer;
+}
+
+
+/* ตกแต่งภาพให้ดูคล้ายๆ ภาพโพลารอยด์*/
+
+.card_newcollec a-shop img {
+    float: left;
+    margin: 0;
+    border: none;
+    padding: 10px;
+    background: #fff;
+    /* border: 1px solid #ddd; */
+}
+
+
+/* เมื่อเอาเมาส์ไปชี้ที่รูปภาพ ให้แสดงตัว caption ขึ้นมา โดยกำหนดความโปร่งแสงไว้ที่ 75%*/
+
+
+/* ตรงนี้แหละที่เป็นจุดสำคัญ  CSS ตรงนี้จะทำงานก็ต่อเมื่อเอาเมาส์ไปชี้ที่ภาพเท่านั้น  โอ้วเหมือน javascript เลย*/
+
+.card_newcollec a-shop:hover .desc {
+    display: block;
+    font-size: 1.2em;
+    padding: 3%;
+    background: #1dadab;
+    /* background: -webkit-linear-gradient(bottom,rgba(255,0,0,0),rgb(94, 206, 210)); */
+    filter: alpha(opacity=75);
+    opacity: .75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    /*--IE 8 Transparency--*/
+    color: #fff;
+    position: absolute;
+    bottom: 1%;
+    /* left: 11px; */
+    /* padding: 10px; */
+    margin: 0;
+    width: 100%;
+    /* border-top: 1px solid #999; */
+}
+
+
+/* ตัว strong ใน caption กำหนดให้ใหญ่กว่าปกติหน่อย เพื่อความสวยงาม*/
+
+.card_newcollec a-shop:hover .desc strong {
+    display: block;
+    /* margin-bottom: 5px; */
+    /* font-size:1.5em; */
+}
+
+
+/* ตอนแสดงขึ้นมาครั้งแรก ให้ซ่อน caption ไว้ก่อน*/
+
+.card_newcollec .a-shop .desc {
+    display: none;
+}
+
+
+/* .btn {
+    background-color: lightgray;
+} */
+
+.btn:hover {
+    background-color: lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

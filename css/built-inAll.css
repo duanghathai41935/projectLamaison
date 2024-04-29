@@ -1,0 +1,54 @@
+#header_builtin{
+    background-image: url('https://www.stovax.com/wp-content/uploads/eStudio-135R-with-Optional-Silver-Birch-Fuel-Effect-blog-header.jpg');
+    width: 100%;
+    padding: 10%;
+    background-position: 50% 5% ;
+    background-repeat: no-repeat;
+    
+    text-align: center;
+    
+}
+#header_builtin h1{
+    color: white;
+    font-weight:bold; 
+    font-size: 300%;
+
+}
+#header_builtin h1 a{
+    text-decoration: none;
+
+}
+#header_builtin i{
+    font-style:normal;
+    color: white;
+}
+#taxt-builtin{
+    color:teal ;
+    background-color: rgb(237, 237, 237);
+    border-left: 5px solid teal;
+    margin-left: 15%;
+    width: 70%;
+    margin-top: 1%;
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 5%;
+    
+}
+#taxt-builtin h1{
+    font-size: 30px;
+}
+/* footer */
+
+footer {
+    clear: both;
+    color: #444;
+    text-align: left;
+    padding: 3em 1em;
+    margin: 0;
+}
+
+footer a {
+    color: #444;
+    text-decoration: none;
+}

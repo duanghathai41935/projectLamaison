@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return product & Refund</title>
+    <!-- Font -->
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- link file -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/css_return.css">
+
+
+    <script type="text/javascript">
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+            // make it as accordion for smaller screens
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+        }); // jquery end
+    </script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="../index.html"><img src="../pic/lamaison-logo-2.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav">
+                <li class="nav-item active"> <a class="nav-link" href="../index.html">Home </a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Shop </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"> Type of Room &raquo </a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/bedroom.html">Bedroom &raquo </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="">Table</a></li>
+                                        <li><a class="dropdown-item" href="">Bed</a></li>
+                                        <li><a class="dropdown-item" href="">Cupboard</a></li>
+                                        <li><a class="dropdown-item" href="">Chairs</a></li>
+                                        <li><a class="dropdown-item" href="">shelf</a></li>
+                                        <li><a class="dropdown-item" href="">
+                                          Dressing Table</a></li>
+                                        <li><a class="dropdown-item" href="">Lamps</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item " href="../pages/kitchen-room.html">Kitchen room &raquo </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="">Kitchen</a></li>
+                                        <li><a class="dropdown-item" href="">Stove</a></li>
+                                        <li><a class="dropdown-item" href="">Sink</a></li>
+                                        <li><a class="dropdown-item" href="">Fridge</a></li>
+                                        <li><a class="dropdown-item" href="">Counter</a></li>
+                                        <li><a class="dropdown-item" href="">Dining table</a></li>
+                                        <li><a class="dropdown-item" href="">Chairs</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="../pages/livingroom.html">Living Room &raquo </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="">Sofa</a></li>
+                                        <li><a class="dropdown-item" href="">Coffee Table</a></li>
+                                        <li><a class="dropdown-item" href="">Media Stand</a></li>
+                                        <li><a class="dropdown-item" href="">Side Table</a></li>
+                                        <li><a class="dropdown-item" href="">Accent Chairs</a></li>
+                                        <li><a class="dropdown-item" href="">Rug</a></li>
+                                        <li><a class="dropdown-item" href="">Lighting</a></li>
+                                        <li><a class="dropdown-item" href="">Lamps</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="../pages/home-office.html"> Home Office &raquo </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="">Desk</a></li>
+                                        <li><a class="dropdown-item" href="">Chairs</a></li>
+                                        <li><a class="dropdown-item" href="">Desk Lamp</a></li>
+                                        <li><a class="dropdown-item" href="">Filing Cabinet</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="../pages/cart.html"> Cart </a></li>
+                        <li><a class="dropdown-item" href="../pages/checkout.html"> Check Out</a></li>
+                        <li><a class="dropdown-item" href="#"> Customer Service &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/payment.html">Payment Method</a></li>
+                                <li><a class="dropdown-item" href="../pages/return.html">Return Policy</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li class="nav-item "> <a class="nav-link" href="../pages/aboutus.html">About Us </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="../pages/contact.html">Contact Us </a> </li>
+                </li>
+        </div>
+    </nav>
+
+    <h3 class="text-center" ">Return Policy</h2>
+    <div class="row row-cols-1 m-5 ">
+        <div class="body-content col ">
+
+            <h5 class=" text-decoration-underline font-weight-bold text-center mb-5 ">Exchange/Return Policy for purchases via online shopping Conditions for exchange/return for purchases made through online shopping Considering the following conditions</h5>
+            <ol>
+                <li>The customer must notify the exchange/return within 14 days after receiving the product.</li>
+                <li>The company reserves the right to exchange and return products in the following cases:
+                    <li>The product is defective, broken-damaged, lost in transit.</li>
+                    <li>The product received does not match the product description specified on the website.</li>
+                    <li>The product received does not match the order list.
+                    </li>
+                    </ul>
+                </li>
+                <li> Products that are not in the conditions of exchange/return
+                    <ul>
+                        <li>Product group, special order, production orde</li>
+                        <li>Clearance product group</li>
+                        <li>show product</li>
+                        <li>Products with a limited period of time, such as light bulbs, batteries or batteries.</li>
+                    </ul>
+                </li>
+                <li>The company asked to collect the deterioration of the product. If the product has been assembled, it is 50% of the product price. (before discount) in the case of requesting a return</li>
+                <li>The company asks to collect a return fee of 500 baht / time for furniture products that have been assembled and installed. (In the case of returning via the company's transport)</li>
+                <li>For the return of HDI (small decorative items) products with the wishes of the customer (such as change of mind, etc.), the customer must return the product to the company by himself via private transport and the customer will be responsible
+                    for the cost of returning the product. by myself
+                    <ul>
+                        <li>Return/Replacement The customer must return the product to the company in the original condition received by the customer.</li>
+                        <li>Customers should take photos/videos. of the product before or during the packing process to be used as evidence confirming the condition of the product</li>
+                        <li>If the customer wants the company pick up There is a service charge of 500 baht/time.</li>
+                    </ul>
+                </li>
+                <li>In the event of a defective product caused by manufacturing, the company will replace the product with a new one or replace it with an equivalent product.</li>
+                <li>In the event that the product is damaged from the use of the customer, the company will not accept the return / exchange of the product.</li>
+                <li>The company reserves the right to cancel the refund for orders paid by credit card in installments (installment).</li>
+            </ol>
+            <p class="text-decoration-underline font-weight-bold ">How to change the product for purchases via online shopping</p>
+            <ol>
+                <li>Customers can change the product within 14 days after receiving the product. by notifying via email customerservice_online@indexlivingmall.com or Customer Contact Center 1379 Online Customer Service The customer must attach the receipt.
+                    and documents confirming payment Product photos/videos with reasons for replacement
+                </li>
+                <li>The staff will contact you back within 3 working days to confirm the need to exchange the product. before proceeding with the return of the product by considering the company regarded as the best</li>
+                <li>Products that need to be changed, the company coordinates to change products according to the specified channels.</li>
+            </ol>
+            <p class="text-decoration-underline font-weight-bold ">How to return/refund for purchases via online shopping</p>
+            <ol>
+                <li>Customers can return the product within 14 days after receiving the product. by notifying via email customerservice_online@indexlivingmall.com or Customer Contact Center 1379 Online Customer Service The customer must attach the receipt.
+                    and documents confirming payment Product photo/video with reason for return
+                </li>
+                <li>The staff will contact you back within 3 business days to confirm the need to return the product. by considering the company regarded as the best</li>
+                <li>Products (types of furniture) that need to be returned, the company coordinates to receive the return of the product according to the specified channel and time.</li>
+                <li>Home decoration products (HDI type) to be returned The customer must deliver the goods through private transport by themselves. according to the delivery address specified by the company, along with the parcel number and order number via
+                    email customerservice_online@indexlivingmall.com or Customer Contact Center 1379 Online Customer Service
+
+                </li>
+                <li>Documents required in the event of a refund by email
+                    <ul>
+                        <li>A copy of ID card/passport, together with a valid signature, and indicate the order number</li>
+                        <li>Copy of the front page of the account book</li>
+                    </ul>
+                </li>
+                <li>Documents required in the event of a refund by email
+                    <ul>
+                        <li>Credit card limit refund Within 15-30 days after the company Received complete refund documents This will be effective in the next billing cycle of the credit card.</li>
+                        <li>Refunds to debit cards Refunds will be processed back to the account linked to the debit card within 30-45 days (starting from the date the customer receives the refund confirmation email) or depending on the card issuing bank.</li>
+                        <li>Transfer back to bank account Within 7-20 days after the company Received complete refund documents</li>
+                    </ul>
+                </li>
+            </ol>
+            <a href=" "><button id="btn-office " class="btn btn-outline-secondary ">I understand and accept the terms</button></a>
+        </div>
+    </div>
+    <!-- Container (Contact Section) -->
+    <div id="contact " class="container-fluid bg-grey w-100 ">
+        <h3 class="text-center mb-2 ">CONTACT</h3>
+        <div class="row ">
+            <div class="col-sm-5 ">
+                <p>If you have a question, you can contact us and we'll get back to you within 24 hours.</p>
+                <p><span class="glyphicon glyphicon-map-marker "></span> Chicago, US</p>
+                <p><span class="glyphicon glyphicon-phone "></span> +00 1515151515</p>
+                <p><span class="glyphicon glyphicon-envelope "></span> myemail@something.com</p>
+            </div>
+            <div class="col-sm-7 slideanim ">
+                <div class="row ">
+                    <div class="col-sm-6 form-group ">
+                        <input class="form-control " id="name " name="name " placeholder="Name " type="text " required>
+                    </div>
+                    <div class="col-sm-6 form-group ">
+                        <input class="form-control " id="email " name="email " placeholder="Email " type="email " required>
+                    </div>
+                </div>
+                <textarea class="form-control " id="comments " name="comments " placeholder="Comment " rows="5 "></textarea><br>
+                <div class="btn-send row ">
+                    <div class="col-sm-12 form-group ">
+                        <button class="btn-sent btn btn-outline-secondary pull-right " type="submit ">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- footer -->
+    <footer style="border-top: 1px solid rgb(214, 210, 210); ">
+        <div class="container ">
+            <div id="row-footer " class="row row-cols-2 row-cols-md-4 ">
+                <div>
+                    <img src="../pic/lamaison-logo-2.png " alt="logo " style="width: 30%; "><br>
+                    <p>Good Choice Good Shop for your house</p>
+                    <a href="# " class="btn btn-social-icon btn-facebook ">
+                        <i class="bi bi-facebook " style="font-size: 25px; "></i>
+                    </a>
+                    <a href="# " class="btn btn-social-icon btn-instagram ">
+                        <i class="bi bi-instagram " style="font-size: 25px; "></i>
+                    </a>
+                    <a href="# " class="btn btn-social-icon btn-linkedin ">
+                        <i class="bi bi-linkedin " style="font-size: 25px; "></i>
+                    </a>
+                    <a href="# " class="btn btn-social-icon btn-twitter ">
+                        <i class="bi bi-twitter " style="font-size: 25px; "></i>
+                    </a>
+                </div>
+
+                <div class="col " id="help ">
+                    <h6><b style="border-bottom: 3px solid gray; ">Customer Service</b></h6>
+                    <ul id="help-service-item ">
+                        <li> <a href="../pages/payment.html ">Payment Method</a></li>
+                        <li> <a href="../pages/return.html ">
+        Return Policy</li>
+        <li> <a href="../pages/aboutus.html ">
+                About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col ">
+                    <h6><b style="border-bottom: 3px solid gray; ">Store</b></h6>
+                    <ul>
+                        <li> <a href="../pages/bedroom.html ">Bedroom</a></li>
+                        <li> <a href="../pages/kitchen-room.html ">Kitchen Room</a></li>
+                        <li> <a href="../pages/home-office.html ">Home Office</a></li>
+                        <li> <a href="../pages/promotion.html ">Promotion</a></li>
+                    </ul>
+                </div>
+                <div class="col " id="aboutus-service ">
+                    <h6><b style="border-bottom: 3px solid gray; ">Contacts</b></h6>
+                    <p>Address: 113 Bansabyeee, Khonkaen, Thailand.</p>
+                    <p>Email: la_maison@example.com</p>
+                    <p>Phone: +66 234 111234 </p>
+                    <p>Fax: +55 346 985688 </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>

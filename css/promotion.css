@@ -1,0 +1,104 @@
+#header_cart{
+    background-image:url('https://www.kachathailand.com/wp-content/uploads/2021/04/210428-Content-%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%A1%E0%B8%AD%E0%B8%A5Minimal-Style-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B8%97%E0%B8%B3%E0%B9%84%E0%B8%A1%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%99%E0%B8%B4%E0%B8%A2%E0%B8%A1%E0%B9%83%E0%B8%99%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A04.jpg') ;
+    width: 100%;
+    padding: 10%;
+    background-position: 10% 65% ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+#button-addon2{
+    background-color: #fff;
+    color: #1dadab;
+}
+#button-addon2:hover{
+    background-color: #1dadab;
+    color: #fff;
+}
+.cart{
+    max-width: 50%;
+    padding: 1rem 2rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0.25rem;
+    margin-left: 25%;
+
+}
+.new_collec{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.new_collec h1{
+    font-weight: bold;
+    
+   
+}
+.card_newcollec {
+	margin: 0;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+.card_newcollec a {
+	text-decoration: none;
+	float: left;
+}
+/* ถ้าไม่ใส่ cursor: pointer ไป ตอนแสดงใน ie6 caption จะหน่วงนิดนึง*/
+.card_newcollec a:hover {
+	cursor: pointer;
+}
+/* ตกแต่งภาพให้ดูคล้ายๆ ภาพโพลารอยด์*/
+.card_newcollec a img {
+	float: left;
+	margin: 0;
+	border: none;
+	padding: 10px;
+	background: #fff;
+	/* border: 1px solid #ddd; */
+}
+/* เมื่อเอาเมาส์ไปชี้ที่รูปภาพ ให้แสดงตัว caption ขึ้นมา โดยกำหนดความโปร่งแสงไว้ที่ 75%*/
+/* ตรงนี้แหละที่เป็นจุดสำคัญ  CSS ตรงนี้จะทำงานก็ต่อเมื่อเอาเมาส์ไปชี้ที่ภาพเท่านั้น  โอ้วเหมือน javascript เลย*/
+.card_newcollec a:hover .desc {
+	display: block;
+	font-size: 1.2em;
+	padding:3%;
+	background: #1dadab;
+    /* background: -webkit-linear-gradient(bottom,rgba(255,0,0,0),rgb(94, 206, 210)); */
+
+	filter:alpha(opacity=75);
+	opacity:.75;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; /*--IE 8 Transparency--*/
+	color: #fff;
+	position: absolute;
+	bottom: 1%;
+	/* left: 11px; */
+	/* padding: 10px; */
+	margin: 0;
+	width: 100%;
+	/* border-top: 1px solid #999; */
+}
+/* ตัว strong ใน caption กำหนดให้ใหญ่กว่าปกติหน่อย เพื่อความสวยงาม*/
+.card_newcollec a:hover .desc strong {
+	display: block;
+	/* margin-bottom: 5px; */
+	/* font-size:1.5em; */
+}
+/* ตอนแสดงขึ้นมาครั้งแรก ให้ซ่อน caption ไว้ก่อน*/
+.card_newcollec a .desc {
+	display: none;
+}
+/* footer */
+
+footer {
+    clear: both;
+    color: #444;
+    text-align: left;
+    padding: 3em 1em;
+    margin: 0;
+}
+
+footer a {
+    color: #444;
+    text-decoration: none;
+}
